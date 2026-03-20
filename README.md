@@ -18,6 +18,21 @@ A personal focus timer for iOS and Android built with React Native and Expo. Set
 
 ---
 
+## Screenshots
+
+<p align="center">
+  <img src="UI/image3.png" width="22%" alt="Home — circular timer, stats bar, apps to avoid"/>
+  <img src="UI/image1.png" width="22%" alt="Focus Active — countdown, progress bar, motivational quote"/>
+  <img src="UI/image2.png" width="22%" alt="App Selection — sectioned list with search and checkboxes"/>
+  <img src="UI/image.png"  width="22%" alt="Locked Prompt — remaining time, Take a Break, End Session"/>
+</p>
+
+<p align="center">
+  <sub>Home &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Focus Active &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; App Selection &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Locked Prompt</sub>
+</p>
+
+---
+
 ## Tech Stack
 
 | Layer | Choice |

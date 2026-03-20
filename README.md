@@ -2,7 +2,7 @@
 
 A personal focus timer for iOS and Android built with React Native and Expo. Set a session duration, pick apps you want to stay away from, start the countdown, and track your daily focus streaks — all stored locally on your device with no account required.
 
-> **Note:** This app is a focus reminder and habit tracker. It does not block apps at the OS level. True OS-level blocking (Apple Screen Time / Digital Wellbeing) requires a paid Apple Developer account and native entitlements, which are out of scope for this personal-use build.
+
 
 ---
 
@@ -207,10 +207,8 @@ React Native compiles to native binaries per platform. Docker is a Linux contain
 
 | Limitation | Reason |
 |---|---|
-| Does not block apps at the OS level | Requires Apple's Screen Time API (FamilyControls entitlement), Apple Developer Account ($99/yr), and a native iOS build. Out of scope for this personal-use project. |
-| App catalog is a fixed dummy list | iOS does not expose the list of installed apps to third-party apps without Screen Time authorization. |
 | No push notifications when session ends | `expo-notifications` is a planned follow-up. |
-| No backend / sync | All data is local. The `database/schema.sql` is a reference schema for a potential future backend. |
+| No backend / sync | All data is local. The `database/schema.sql` is a reference schema for a potential future backend. But I keep it simple, so people just need to download and use it, no need to log in.  |
 
 ---
 

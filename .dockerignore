@@ -1,0 +1,36 @@
+# Git
+.git
+.gitignore
+
+# Dependencies (reinstalled inside container)
+node_modules
+
+# Expo build outputs
+.expo
+.expo-web-export
+dist
+web-build
+
+# Native generated folders
+ios
+android
+
+# Dev / debug
+*.log
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env*
+
+# TypeScript incremental
+*.tsbuildinfo
+
+# IDE
+.cursor
+.vscode

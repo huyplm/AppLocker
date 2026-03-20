@@ -1,0 +1,24 @@
+services:
+  lockerapp:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: runner
+    ports:
+      - "3000:80"
+    restart: unless-stopped
+
+  # Optional: dev server with hot reload (no build needed)
+  lockerapp-dev:
+    image: node:20-alpine
+    working_dir: /app
+    volumes:
+      - .:/app
+      - /app/node_modules
+    ports:
+      - "8081:8081"
+    environment:
+      - CI=1
+    command: sh -c "npm install --legacy-peer-deps && npx expo start --web --port 8081"
+    profiles:
+      - dev

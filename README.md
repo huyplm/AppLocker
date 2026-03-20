@@ -138,6 +138,56 @@ Home ──── [Start Focus] ────► FocusActive
 
 ---
 
+## Docker (Web Version)
+
+The web export of LockerApp can be containerized and served via Nginx. This lets anyone run the app locally without installing Node.js or Expo.
+
+> **What you get:** The full UI running in a browser. AsyncStorage falls back to `localStorage` on web, so preferences and session history still persist between page refreshes.
+
+### Prerequisites
+
+- [Docker Desktop](https://www.docker.com/products/docker-desktop/) installed and running
+
+### Production container (recommended)
+
+```bash
+# Build image and start on port 3000
+npm run docker:up
+# or manually:
+docker compose up --build
+```
+
+Then open **http://localhost:3000** in your browser.
+
+### One-liner (without docker compose)
+
+```bash
+npm run docker:build   # builds image tagged "lockerapp"
+npm run docker:run     # runs on http://localhost:3000
+```
+
+### Dev server with hot reload inside Docker
+
+```bash
+npm run docker:dev
+# Metro bundler available at http://localhost:8081
+```
+
+### File overview
+
+| File | Purpose |
+|---|---|
+| `Dockerfile` | Multi-stage build: Node 20 builds the static bundle → Nginx 1.27 serves it |
+| `nginx.conf` | SPA routing fallback, 1-year asset caching, gzip, security headers |
+| `docker-compose.yml` | `lockerapp` service (production) + `lockerapp-dev` service (dev, opt-in via `--profile dev`) |
+| `.dockerignore` | Excludes `node_modules`, build outputs, `.git`, IDE files from the build context |
+
+### Why Docker cannot run the iOS/Android version
+
+React Native compiles to native binaries per platform. Docker is a Linux container runtime — it has no iOS simulator or Android emulator. For native builds you need Xcode (Mac only) or EAS Build (cloud).
+
+---
+
 ## Known Limitations
 
 | Limitation | Reason |

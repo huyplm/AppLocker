@@ -7,7 +7,12 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "typecheck": "tsc --noEmit"
+    "export:web": "expo export --platform web --output-dir dist",
+    "typecheck": "tsc --noEmit",
+    "docker:build": "docker build -t lockerapp .",
+    "docker:run": "docker run -p 3000:80 lockerapp",
+    "docker:up": "docker compose up --build",
+    "docker:dev": "docker compose --profile dev up lockerapp-dev"
   },
   "dependencies": {
     "@expo/metro-runtime": "~6.1.2",

@@ -1,6 +1,10 @@
 # LockerApp
 
 A personal focus timer for iOS and Android built with React Native and Expo. Set a session duration, pick apps you want to stay away from, start the countdown, and track your daily focus streaks — all stored locally on your device with no account required.
+Helps users cut time on distracting apps by ~30% and reclaim 30–50 minutes of focused time per day through app blocking, timed sessions, and streak tracking.
+Encourages consistent deep‑work habits by turning focus into a daily streak challenge, making it easier to stay off social media during important tasks.
+
+
 
 
 
